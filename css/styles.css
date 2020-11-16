@@ -1,0 +1,25 @@
+#gallery {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: salmon;
+}
+.imagess {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+ul {
+  list-style: none;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
