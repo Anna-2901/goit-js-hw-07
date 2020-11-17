@@ -11,9 +11,9 @@ const output = document.querySelector('#name-output');
 
 input.addEventListener('input', changeInput);
 function changeInput(event) {
-    input.value === ''
-        ? (output.textContent = 'незнакомец')
-        : (output.textContent = event.currentTarget.value);
+    output.textContent = input.value === ''
+        ? 'незнакомец'
+        : event.currentTarget.value;
 }
 
 // let input = document.getElementById("name-input");

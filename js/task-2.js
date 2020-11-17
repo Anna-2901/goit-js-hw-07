@@ -22,15 +22,29 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const createElements = ingredient => {
+ const elem = document.createElement('li');
+  elem.textContent = ingredient;
+  return elem
+};
+const allElements = ingredients.map(ingredient => createElements(ingredient));
+
 const vegetables = document.querySelector('#ingredients');
-const listIngredients = (ingredient) => {
-  const creatIngredient = document.createElement('li');
-  creatIngredient.textContent = ingredient;
-  vegetables.appendChild(creatIngredient);
-  return creatIngredient;
-}
-ingredients.map(ingredient => listIngredients(ingredient));
+ vegetables.append(...allElements);
 console.log(vegetables)
+
+
+// const vegetables = document.querySelector('#ingredients');
+// const listIngredients = (ingredient) => {
+//   const creatIngredient = document.createElement('li');
+//   creatIngredient.textContent = ingredient;
+//   vegetables.append(creatIngredient);
+//  return creatIngredient;
+// }
+// ingredients.map(ingredient => listIngredients(ingredient));
+// console.log(vegetables)
+
+
 
 
 
